@@ -8,12 +8,11 @@ using System.Threading.Tasks;
 using Discord.WebSocket;
 using SummaryAttribute = Discord.Commands.SummaryAttribute;
 using System.Security.Cryptography;
-using Discord.Interactions;
 
 namespace W_bot.Modules.Prefix
 {
     // this Module name, PrefixModule, will be called by AddModule when loading the bot with the available prefix commands
-    public class PrefixModule : ModuleBase<SocketCommandContext>
+    public class PrefixModule : ModuleBase
     {
         [Command("version")]
         [Alias("ver")]
@@ -74,23 +73,25 @@ namespace W_bot.Modules.Prefix
                 "+8ball [anything] //Tells your fortune\r\n" +
                 "+trolleyproblem //Shows video of a trolley flying into a childrens hospital\r\n" +
                 "+dream //Shows video of dream being a peadophile\r\n" +
-                "+adolfrap //Send W Adolf Hitler rap\r\n" +
-                "+ishowshit //Sends video or ishowspeed eating shit\r\n" +
-                "+correctopinion //Shows you the only correct opinion\r\n" +
-                "+nigga or +nigger //Shows edit of guy saying the n word\r\n" +
                 "+head //Shows video explanation of wich character form Alvin and the chimpmunks gives the best head\r\n" +
-                "+watermelon //Shows video of a black guy humping a watermelon\r\n" +
                 "+L (username) //Sends terminator wins gif and pings a user if specified\n" +
                 "+skill (username) //Sends video of monkeys dancing to skill issuse and mentiones a user if specified\n" +
                 "+admin //Show's admin commands\n" +
                 "+smash or pass [something] //Delivers verdict if someone is for smashing or passing\r\n" +
                 "+pfp (username) //Shows your profile picture or someone else's if specified\r\n" +
                 "+status [anything] //Changes the bot's status\n" +
-                "+version //Displays the bot verison and .net verison\r\n" +
+                "+version //Displays the bot verison and .net verison\r\n\n" +
+                "#Requires NSFW channel\n" +
+                "+watermelon //Shows video of a black guy humping a watermelon\r\n" +
+                "+nigga or +nigger //Shows edit of guy saying the n word\r\n" +
+                "+correctopinion //Shows you the only correct opinion\r\n" +
+                "+ishowshit //Sends video or ishowspeed eating shit\r\n" +
+                "+adolfrap //Send W Adolf Hitler rap\r\n" +
                 "\r\n" +
                 "Made by: SuperVidak64#7535");
         }
 
+        [RequireNsfw]
         [Command("watermelon")]
         public async Task melon()
         {
@@ -176,6 +177,7 @@ namespace W_bot.Modules.Prefix
             await Context.Channel.SendFileAsync("Media\\trolley.mp4");
         }
 
+        [RequireNsfw]
         [Command("adolfrap")]
         public async Task adolfrap()
         {
@@ -188,18 +190,21 @@ namespace W_bot.Modules.Prefix
             await Context.Channel.SendFileAsync("Media\\dream.mp4");
         }
 
+        [RequireNsfw]
         [Command("ishowshit")]
         public async Task ishowshit()
         {
             await Context.Channel.SendFileAsync("Media\\ishowshit.mp4");
         }
 
+        [RequireNsfw]
         [Command("correctopinion")]
         public async Task correctopinion()
         {
             await Context.Channel.SendFileAsync("Media\\correctopinion.mp4");
         }
 
+        [RequireNsfw]
         [Command("nigger")]
         [Alias("nigga")]
         public async Task nigger()
