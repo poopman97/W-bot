@@ -2,7 +2,7 @@
 
 namespace W_bot.Modules.Prefix
 {
-    public class Time : ModuleBase<SocketCommandContext>
+    public class Time : ModuleBase
     {
         //Time is local time in my case utc+1
         [Command("time")]
