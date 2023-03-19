@@ -8,3 +8,5 @@ tokens:
     discord: Bot_Token
 ```
 For Guild_id set your discord server id
+
+Media folder place in the same folder as the executable
