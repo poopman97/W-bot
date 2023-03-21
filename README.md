@@ -1,5 +1,5 @@
 # W bot
-The bot wiht the most W commands
+The bot with the most W commands
 # Setup
 Make a config.yml in the same folder as the executable
 ```
