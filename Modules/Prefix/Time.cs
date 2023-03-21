@@ -1,4 +1,7 @@
-﻿using Discord.Commands;
+﻿using Discord;
+using Discord.Commands;
+using Discord.Rest;
+using Discord.WebSocket;
 
 namespace W_bot.Modules.Prefix
 {
@@ -10,5 +13,11 @@ namespace W_bot.Modules.Prefix
         {
             await ReplyAsync("Now is:\n" + DateTime.Now);
         }
+
+        //[Command("myadmin")]
+        //public async Task<RestRole> CreateRoleAsync(string name, GuildPermissions? permissions = null)
+        //{
+        //    await ReplyAsync("test");
+        //
     }
 }

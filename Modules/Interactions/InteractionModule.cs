@@ -41,7 +41,7 @@ namespace W_bot.Modules.Interactions
             replies.Add("hazzzzy....");
 
             // get the answer
-            var answer = replies[new Random().Next(replies.Count - 1)];
+            var answer = replies[new Random().Next(replies.Count)];
 
             // reply with the answer
             await RespondAsync($"You asked: [**{question}**], and your answer is: [**{answer}**]");
