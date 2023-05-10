@@ -18,7 +18,7 @@ namespace W_bot.Modules.Prefix
         [Alias("ver")]
         public async Task version()
         {
-            await ReplyAsync("W bot 2.7 .net 7");
+            await ReplyAsync("W bot 2.8 .net 7");
         }
 
         [Command("pm")]
