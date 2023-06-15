@@ -100,6 +100,7 @@ namespace W_bot
             prefixCommands.AddModule<W_bot.Modules.Prefix.Status>();
             prefixCommands.AddModule<W_bot.Modules.Prefix.Pick>();
             prefixCommands.AddModule<W_bot.Modules.Prefix.SkillIssuse>();
+            prefixCommands.AddModule<W_bot.Modules.Prefix.Scan_his_balls>();
             await prefixCommands.InitializeAsync();
 
 
