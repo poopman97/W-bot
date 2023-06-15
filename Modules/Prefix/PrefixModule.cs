@@ -18,7 +18,7 @@ namespace W_bot.Modules.Prefix
         [Alias("ver")]
         public async Task version()
         {
-            await ReplyAsync("W bot 2.8 .net 7");
+            await ReplyAsync("W bot 2.9 .net 7");
         }
 
         [Command("pm")]
@@ -55,13 +55,14 @@ namespace W_bot.Modules.Prefix
                 // "+adolfrap //Send W Adolf Hitler rap\r\n" +
                 "+smash or pass [anything] //Delivers verdict if someone is for smashing or passing\r\n" +
                 "+L (username) //Sends terminator wins gif and pings a user if specified\n" +
+                "[Ping the bot] + scan his balls //Scans someones balls\n"+
                 "+skill (username) //Sends video of monkeys dancing to skill issuse and mentiones a user if specified\n" +
                 "+admin //Show's admin commands\n" +
                 "+pfp (username) //Shows your profile picture or someone else's if specified\r\n" +
                 "+status [anything] //Changes the bot's status\n" +
                 "+version //Displays the bot verison and .net verison\r\n" +
                 "\r\n" +
-                "Made by: SuperVidak64#7535");
+                "Made by: supervidak64");
         }
 
         [Command("realhelp")]
@@ -75,6 +76,7 @@ namespace W_bot.Modules.Prefix
                 "+dream //Shows video of dream being a peadophile\r\n" +
                 "+head //Shows video explanation of wich character form Alvin and the chimpmunks gives the best head\r\n" +
                 "+L (username) //Sends terminator wins gif and pings a user if specified\n" +
+                "[Ping the bot] + scan his balls //Scans someones balls\n" +
                 "+skill (username) //Sends video of monkeys dancing to skill issuse and mentiones a user if specified\n" +
                 "+admin //Show's admin commands\n" +
                 "+smash or pass [something] //Delivers verdict if someone is for smashing or passing\r\n" +
@@ -88,7 +90,7 @@ namespace W_bot.Modules.Prefix
                 "+ishowshit //Sends video or ishowspeed eating shit\r\n" +
                 "+adolfrap //Send W Adolf Hitler rap\r\n" +
                 "\r\n" +
-                "Made by: SuperVidak64#7535");
+                "Made by: supervidak64");
         }
 
         [RequireNsfw]
