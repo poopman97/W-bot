@@ -98,7 +98,7 @@ namespace W_bot.Modules.Interactions
 
             // Build an embed to respond.
             var embed = new EmbedBuilder()
-                .WithTitle($"{user.Username}#{user.Discriminator}")
+                .WithTitle($"{user.Username}")
                 .WithImageUrl(user.GetAvatarUrl(size: 4096) ?? user.GetDefaultAvatarUrl())
                 .WithColor(Color.Blue)
                 .Build();

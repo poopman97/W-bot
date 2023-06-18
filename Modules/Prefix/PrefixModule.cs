@@ -18,7 +18,7 @@ namespace W_bot.Modules.Prefix
         [Alias("ver")]
         public async Task version()
         {
-            await ReplyAsync("W bot 2.9 .net 7");
+            await ReplyAsync("W bot 2.9.1 .net 7");
         }
 
         [Command("pm")]
@@ -141,7 +141,7 @@ namespace W_bot.Modules.Prefix
             if (user == null)
             {
                 var embed2 = new EmbedBuilder()
-                .WithTitle($"{Context.User.Username}#{Context.User.Discriminator}")
+                .WithTitle($"{Context.User.Username}")
                 .WithImageUrl(Context.User.GetAvatarUrl(size: 4096) ?? Context.User.GetDefaultAvatarUrl())
                 .WithColor(Color.Blue)
                 .Build();
@@ -151,7 +151,7 @@ namespace W_bot.Modules.Prefix
             else
             {
                 var embed = new EmbedBuilder()
-                .WithTitle($"{user.Username}#{user.Discriminator}")
+                .WithTitle($"{user.Username}")
                 .WithImageUrl(user.GetAvatarUrl(size: 4096) ?? user.GetDefaultAvatarUrl())
                 .WithColor(Color.Blue)
                 .Build();
