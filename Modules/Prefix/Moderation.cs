@@ -29,7 +29,7 @@ namespace W_bot.Modules.Prefix
         [Command("kick")]
         [RequireBotPermission(GuildPermission.KickMembers)]
         [RequireUserPermission(GuildPermission.KickMembers, ErrorMessage = "You don't have the permission ``kick_member``!")]
-        public async Task KickMember(SocketGuildUser user = null, [Remainder] string reason = null)
+        public async Task KickMember(SocketGuildUser? user = null, [Remainder] string? reason = null)
         {
 
             if (user == null)
@@ -101,7 +101,7 @@ namespace W_bot.Modules.Prefix
         [Command("ban")]
         [RequireBotPermission(GuildPermission.BanMembers)]
         [RequireUserPermission(GuildPermission.BanMembers, ErrorMessage = "You don't have the permission ``ban_member``!")]
-        public async Task BanMember(IGuildUser user = null, [Remainder] string reason = null)
+        public async Task BanMember(IGuildUser? user = null, [Remainder] string? reason = null)
         {
             if (user == null)
             {

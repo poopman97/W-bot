@@ -26,10 +26,12 @@ namespace W_bot
             _config = config;
         }
 
-        public async Task InitializeAsync()
+        public Task InitializeAsync()
         {
             _client.MessageReceived += HandleCommandAsync;
+            return Task.CompletedTask;
         }
+
         public void AddModule<T>()
         {
             _commands.AddModuleAsync<T>(null);
@@ -42,7 +44,7 @@ namespace W_bot
             if (message == null) return;
             // Create a number to track where the prefix ends and the command begins
             int argPos = 0;
-            SocketGuildUser socketGuildUser = message.Author as SocketGuildUser;
+            SocketGuildUser? socketGuildUser = message.Author as SocketGuildUser;
             //manage_message = socketGuildUser.GuildPermissions.ViewAuditLog;
             // Determine if the message is a command based on the prefix and make sure no bots trigger commands
             if (!(message.HasStringPrefix("+", ref argPos) ||
