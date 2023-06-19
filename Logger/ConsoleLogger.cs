@@ -5,13 +5,14 @@ namespace W_bot.Log
     public class ConsoleLogger : Logger
     {
         // Override Log method from ILogger, passing message to LogToConsoleAsync()
-        public override async Task Log(LogMessage message)
+        public override Task Log(LogMessage message)
         {
             // Using Task.Run() in case there are any long running actions, to prevent blocking gateway
-            Task.Run(() => LogToConsoleAsync(this, message));
+            Task.Run(() => LogToConsole(this, message));
+            return Task.CompletedTask;
         }
 
-        private async Task LogToConsoleAsync<T>(T logger, LogMessage message) where T : ILogger
+        private void LogToConsole<T>(T logger, LogMessage message) where T : ILogger
         {
             Console.WriteLine($"guid:{_guid} : " + message);
         }
