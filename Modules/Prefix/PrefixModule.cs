@@ -16,31 +16,22 @@ namespace W_bot.Modules.Prefix
     {
         [Command("version")]
         [Alias("ver")]
-        public async Task version()
-        {
-            await ReplyAsync("W bot 2.9.1 .net 7");
-        }
+        public async Task version() => await ReplyAsync("W bot 2.9.1 .net 7");
 
         [Command("pm")]
         public async Task test(IUser user, [Remainder] string pm)
         {
             var channel = Context.Channel as SocketTextChannel;
             var items = await channel.GetMessagesAsync(1).FlattenAsync();
-            user.SendMessageAsync(pm);
+            await user.SendMessageAsync(pm);
             await channel.DeleteMessagesAsync(items);
         }
 
         [Command("ping")]
-        public async Task Ping()
-        {
-            await ReplyAsync("Pong! 🏓");
-        }
+        public async Task Ping() => await ReplyAsync("Pong! 🏓");
 
         [Command("isgayokay")]
-        public async Task gay()
-        {
-            await ReplyAsync("No ofc it isn't ✝");
-        }
+        public async Task gay() => await ReplyAsync("No ofc it isn't ✝");
 
         [Command("help")]
         public async Task help()
@@ -95,16 +86,10 @@ namespace W_bot.Modules.Prefix
 
         [RequireNsfw]
         [Command("watermelon")]
-        public async Task melon()
-        {
-            await Context.Channel.SendFileAsync("Media\\watermelonguy.gif");
-        }
+        public async Task Melon() => await Context.Channel.SendFileAsync("Media\\watermelonguy.gif");
 
         [Command("hello")]
-        public async Task hello()
-        {
-            await Context.Message.ReplyAsync($"Hello {Context.User.Username}. Nice to meet you!");
-        }
+        public async Task hello() => await Context.Message.ReplyAsync($"Hello {Context.User.Username}. Nice to meet you!");
 
         [Command("8ball")]
         //takvo sranje da se ugradi ocu da se ubijem
@@ -174,59 +159,30 @@ namespace W_bot.Modules.Prefix
         public Task SayAsync([Remainder][Summary("The text to echo")] string echo) => ReplyAsync(echo);
 
         [Command("trolleyproblem")]
-        public async Task trolley()
-        {
-            await Context.Channel.SendFileAsync("Media\\trolley.mp4");
-        }
+        public async Task trolley() => await Context.Channel.SendFileAsync("Media\\trolley.mp4");
 
         [RequireNsfw]
         [Command("adolfrap")]
-        public async Task adolfrap()
-        {
-            await Context.Channel.SendFileAsync("Media\\adolfrap.mp4");
-        }
+        public async Task adolfrap() => await Context.Channel.SendFileAsync("Media\\adolfrap.mp4");
 
         [Command("dream")]
-        public async Task dream()
-        {
-            await Context.Channel.SendFileAsync("Media\\dream.mp4");
-        }
+        public async Task dream() => await Context.Channel.SendFileAsync("Media\\dream.mp4");
 
         [RequireNsfw]
         [Command("ishowshit")]
-        public async Task ishowshit()
-        {
-            await Context.Channel.SendFileAsync("Media\\ishowshit.mp4");
-        }
+        public async Task ishowshit() => await Context.Channel.SendFileAsync("Media\\ishowshit.mp4");
 
         [RequireNsfw]
         [Command("correctopinion")]
-        public async Task correctopinion()
-        {
-            await Context.Channel.SendFileAsync("Media\\correctopinion.mp4");
-        }
+        public async Task correctopinion() => await Context.Channel.SendFileAsync("Media\\correctopinion.mp4");
 
         [RequireNsfw]
         [Command("nigger")]
         [Alias("nigga")]
-        public async Task nigger()
-        {
-            await Context.Channel.SendFileAsync("Media\\nigga.mp4");
-            /*if (Context.Guild.Id == 1071791446576869428)
-            {
-
-            }
-            else
-            {
-                await Context.Channel.SendFileAsync("Media\\nigga.mp4");
-            }*/
-        }
+        public async Task nigger() => await Context.Channel.SendFileAsync("Media\\nigga.mp4");
 
         [Command("head")]
-        public async Task head()
-        {
-            await Context.Channel.SendFileAsync("Media\\head.mp4");
-        }
+        public async Task head() => await Context.Channel.SendFileAsync("Media\\head.mp4");
 
         [Command("admin")]
         [Discord.Commands.RequireUserPermission(GuildPermission.Administrator)]
