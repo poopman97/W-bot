@@ -28,12 +28,12 @@ using W_bot.Modules;
 
 namespace W_bot
 {
-    public class program
+    public class Program
     {
-        private DiscordSocketClient _client;        
+        private DiscordSocketClient? _client;        
         
         // Program entry point
-        public static Task Main(string[] args) => new program().MainAsync();
+        public static Task Main(string[] args) => new Program().MainAsync();
 
 
         public async Task MainAsync()
@@ -101,6 +101,7 @@ namespace W_bot
             prefixCommands.AddModule<W_bot.Modules.Prefix.Pick>();
             prefixCommands.AddModule<W_bot.Modules.Prefix.SkillIssuse>();
             prefixCommands.AddModule<W_bot.Modules.Prefix.Scan_his_balls>();
+            prefixCommands.AddModule<W_bot.Modules.Prefix.Balls>();
             await prefixCommands.InitializeAsync();
 
 
