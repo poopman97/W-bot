@@ -16,7 +16,7 @@ namespace W_bot.Modules.Prefix
     {
         [Command("version")]
         [Alias("ver")]
-        public async Task version() => await ReplyAsync("W bot 2.9.1 .net 7");
+        public async Task version() => await ReplyAsync("W bot 2.10 .net 7");
 
         [Command("pm")]
         public async Task test(IUser user, [Remainder] string pm)
@@ -77,6 +77,7 @@ namespace W_bot.Modules.Prefix
                 "#Requires NSFW channel\n" +
                 "+watermelon //Shows video of a black guy humping a watermelon\r\n" +
                 "+nigga or +nigger //Shows edit of guy saying the n word\r\n" +
+                "+balls //Sends Markiplier's balls" +
                 "+correctopinion //Shows you the only correct opinion\r\n" +
                 "+ishowshit //Sends video or ishowspeed eating shit\r\n" +
                 "+adolfrap //Send W Adolf Hitler rap\r\n" +
