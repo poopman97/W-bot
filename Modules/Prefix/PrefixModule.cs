@@ -77,7 +77,7 @@ namespace W_bot.Modules.Prefix
                 "#Requires NSFW channel\n" +
                 "+watermelon //Shows video of a black guy humping a watermelon\r\n" +
                 "+nigga or +nigger //Shows edit of guy saying the n word\r\n" +
-                "+balls //Sends Markiplier's balls" +
+                "+balls //Sends Markiplier's balls\n" +
                 "+correctopinion //Shows you the only correct opinion\r\n" +
                 "+ishowshit //Sends video or ishowspeed eating shit\r\n" +
                 "+adolfrap //Send W Adolf Hitler rap\r\n" +
